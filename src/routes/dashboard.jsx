@@ -41,6 +41,30 @@ var dashRoutes = [
     icon: "design_app",
     component: Dashboard
   },
+  // {
+  //   path: "/deposit",
+  //   name: "Make a Deposit",
+  //   icon: "business_money-coins",
+  //   component: Dashboard
+  // },
+  // {
+  //   path: "/",
+  //   name: "Transation History",
+  //   icon: "files_paper",
+  //   component: Dashboard
+  // }, 
+  // {
+  //   path: "/",
+  //   name: "Referral Network",
+  //   icon: "business_globe",
+  //   component: Dashboard
+  // }, 
+  // {
+  //   path: "/",
+  //   name: "Settings",
+  //   icon: "loader_gear",
+  //   component: Dashboard
+  // }, 
   {
     collapse: true,
     path: "/pages",

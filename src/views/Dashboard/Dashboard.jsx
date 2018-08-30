@@ -1,4 +1,8 @@
 import React from "react";
+  
+import userBackground from "assets/img/bg5.jpg";
+import userAvatar from "assets/img/mike.jpg";
+
 import {
   Card,
   CardHeader,
@@ -17,12 +21,18 @@ import {
 import { Line } from "react-chartjs-2";
 // react plugin for creating vector maps
 import { VectorMap } from "react-jvectormap";
-
+ 
 import {
+  FormInputs,
   PanelHeader,
+  CardAuthor,
   Stats,
+  CardSection,
+  CardSocials,
   Statistics,
   CardCategory,
+  CardIcon,
+  Button,
   Progress
 } from "components";
 
@@ -33,9 +43,11 @@ import {
   dashboardActiveCountriesCard
 } from "variables/charts.jsx";
 
+// import jacket from "assets/img/saint-laurent.jpg";
 import jacket from "assets/img/saint-laurent.jpg";
 import shirt from "assets/img/balmain.jpg";
 import swim from "assets/img/prada.jpg";
+import coins from "assets/img/coins.jpg";
 
 import { table_data } from "variables/general.jsx";
 
@@ -76,16 +88,85 @@ class Dashboard extends React.Component {
     return (
       <div>
         <PanelHeader
-          size="lg"
+          size="sm"
           content={
-            <Line
-              data={dashboardPanelChart.data}
-              options={dashboardPanelChart.options}
-            />
+            <div style={{height:'10px'}}/>
           }
         />
         <div className="content">
           <Row>
+          <Col md={8} xs={12}>
+              <Card className="card-user">
+                <div className="image">
+                  <img src={userBackground} alt="..." />
+                </div>
+                <CardBody>
+                  <CardAuthor
+                    avatar={userAvatar}
+                    avatarAlt="..."
+                    title="SRT"
+                    description="SocialRemit Token"
+                  />
+                  <p className="description text-center">
+                    "We would like to thank you for your interest to our project. You're in your professional account <br />
+                    of the SocialRemit token(SRT) sale dashboard"
+                  </p>
+                </CardBody>
+                <hr /> 
+              </Card>
+            </Col>
+            <Col xs={12} md={8}> 
+                <Card className="card-tasks"> 
+                  <CardHeader> 
+                    <Row> 
+                      {/*/////////////////////////////*/}
+                      <Col xs={6} md={6}>
+                        <Card className="card-plain"> 
+                          <CardHeader>
+                            <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                              <i className={"now-ui-icons shopping_credit-card"}/>
+                            </div>
+                            <div>My SRT Tokens</div>
+                          </CardHeader>
+                          <CardBody >
+                            <CardTitle tag="h3">10 SRT</CardTitle>  
+                            <a href="#" target="_blank" rel="noopener noreferrer">Set wallet for Withdrawal</a>
+                          </CardBody> 
+                        </Card>
+                      </Col> 
+                      <Col xs={6} md={6}>
+                        <Card className="card-plain"> 
+                          <CardHeader>
+                            <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                              <i className={"now-ui-icons shopping_credit-card"}/>
+                            </div>
+                            <div>My SRT Referral Tokens</div>
+                          </CardHeader>
+                          <CardBody >
+                            <CardTitle tag="h3">0 SRT</CardTitle>  
+                            <a href="#" target="_blank" rel="noopener noreferrer">Get more free token</a>
+                          </CardBody> 
+                        </Card>
+                      </Col> 
+                    </Row>
+                  </CardHeader>
+                  <CardBody>
+                    {/*SRT Token Price*/}
+
+                  </CardBody>
+                  <CardFooter>
+                    <hr />
+                    <Stats>
+                      {[
+                        {
+                          i: "now-ui-icons loader_refresh spin",
+                          t: "Updated 3 minutes ago"
+                        }
+                      ]}
+                    </Stats>
+                  </CardFooter>
+                </Card>  
+            </Col> 
             <Col xs={12} md={12}>
               <Card className="card-stats card-raised">
                 <CardBody>

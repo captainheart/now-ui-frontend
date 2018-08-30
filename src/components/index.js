@@ -7,6 +7,7 @@ import CardIcon from './CardElements/CardIcon';
 import CardSocial from './CardElements/CardSocial';
 import CardSocials from './CardElements/CardSocials';
 import CardStats from './CardElements/CardStats';
+import CardSection from './CardSection/CardSection';
 
 import Button from './CustomButton/CustomButton';
 
@@ -54,6 +55,9 @@ export {
     CardSocial,
     CardSocials,
     CardStats,
+    //CardSection
+    CardSection,
+
     // CustomButton
     Button,
     // CustomCheckbox
