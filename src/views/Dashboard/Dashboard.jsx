@@ -152,7 +152,10 @@ class Dashboard extends React.Component {
                   </CardHeader>
                   <CardBody>
                     {/*SRT Token Price*/}
-
+                    <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                      <i className={"now-ui-icons shopping_credit-card"}/>
+                    </div>
+                    <div>My SRT Referral Tokens</div>
                   </CardBody>
                   <CardFooter>
                     <hr />
