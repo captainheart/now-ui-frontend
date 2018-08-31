@@ -12,7 +12,7 @@ import ValidationForms from "views/Forms/ValidationForms.jsx";
 import Wizard from "views/Forms/Wizard/Wizard.jsx";
 import RegularTables from "views/Tables/RegularTables.jsx";
 import ExtendedTables from "views/Tables/ExtendedTables.jsx";
-import ReactTable from "views/Tables/ReactTable.jsx";
+import ReactTable from "views/Tables/ReactTable.jsx"; 
 import GoogleMaps from "views/Maps/GoogleMaps.jsx";
 import FullScreenMap from "views/Maps/FullScreenMap.jsx";
 import VectorMap from "views/Maps/VectorMap.jsx";
@@ -21,6 +21,11 @@ import Calendar from "views/Calendar/Calendar.jsx";
 import Widgets from "views/Widgets/Widgets.jsx";
 import UserPage from "views/Pages/UserPage.jsx";
 import TimelinePage from "views/Pages/TimelinePage.jsx";
+
+//////////////////////////
+import ICOSettings from "views/ICO/ICOSettings.jsx";
+
+//////////////////////////
 
 import pagesRoutes from "./pages.jsx";
 
@@ -59,12 +64,13 @@ var dashRoutes = [
   //   icon: "business_globe",
   //   component: Dashboard
   // }, 
-  // {
-  //   path: "/",
-  //   name: "Settings",
-  //   icon: "loader_gear",
-  //   component: Dashboard
-  // }, 
+  {
+    path: "/settings",
+    name: "Settings",
+    icon: "loader_gear",
+    component: ICOSettings
+  }, 
+
   {
     collapse: true,
     path: "/pages",
