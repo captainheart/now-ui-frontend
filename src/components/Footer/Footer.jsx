@@ -12,7 +12,7 @@ class Footer extends React.Component {
         <Container fluid={this.props.fluid ? true : false}>
           <nav>
             <ul>
-              <li>
+              {/* <li>
                 <a href="https://www.creative-tim.com">Creative Tim</a>
               </li>
               <li>
@@ -20,24 +20,24 @@ class Footer extends React.Component {
               </li>
               <li>
                 <a href="https://blog.creative-tim.com">Blog</a>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <div className="copyright">
             &copy; {1900 + new Date().getYear()}, Designed by{" "}
             <a
-              href="https://www.invisionapp.com"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
             >
-              Invision
+              Smolina
             </a>. Coded by{" "}
             <a
-              href="https://www.creative-tim.com"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
             >
-              Creative Tim
+              Captainhook
             </a>.
           </div>
         </Container>

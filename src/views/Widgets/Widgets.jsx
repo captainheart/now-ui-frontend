@@ -130,8 +130,8 @@ class Widgets extends React.Component {
             <Col xs={12} md={12} lg={6} className="text-center">
               <Card className="card-contributions">
                 <CardBody>
-                  <CardTitle tag="h1">3,521</CardTitle>
-                  <h3 className="card-category">Total Public Contributions</h3>
+                    <CardTitle tag="h1">3,521</CardTitle>
+                    <h3 className="card-category">Total Public Contributions</h3>
                   <CardDescription>
                     After a very successful two-year run, we’re going to be
                     changing the way that contributions work.

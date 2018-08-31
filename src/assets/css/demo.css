@@ -12,6 +12,16 @@
     display: block;
     width: 100%;
 }
+.time-title{ 
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    color: #9A9A9A;
+}
+.time-value {
+    font-size: 32px;
+    line-height: 1;
+}
 .typography-line span{
     bottom: 10px;
     color: #c0c1c2;
@@ -321,7 +331,7 @@
 
 #images h4{
     margin-bottom: 30px;
-}
+} 
 #javascriptComponents{
     padding-bottom: 0;
 }

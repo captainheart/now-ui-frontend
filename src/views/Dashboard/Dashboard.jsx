@@ -30,6 +30,7 @@ import {
   CardSection,
   CardSocials,
   Statistics,
+  CounterdownSection,
   CardCategory,
   CardIcon,
   Button,
@@ -112,7 +113,7 @@ class Dashboard extends React.Component {
                       of the SocialRemit token(SRT) sale dashboard"
                     </p>
                     <div>
-    Favorite Food: <FontAwesomeIcon icon="dove" />
+    Favorite ii: <FontAwesomeIcon icon="dove" />
   </div>
                   </CardBody>
                   <hr /> 
@@ -260,7 +261,7 @@ class Dashboard extends React.Component {
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader> 
-                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'25px'}}>
                     <i className={"now-ui-icons design_vector"}/>
                   </div>
                   <div>Token Distribution</div> 
@@ -292,314 +293,94 @@ class Dashboard extends React.Component {
                   </Row>
                 </CardHeader>
                 <CardBody> 
-                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'25px'}}>
                     <i className={"now-ui-icons education_paper"}/>
                   </div> 
                   <Col>
                     <div>Total Sold</div>
-                    <div style={{paddingLeft:'10px'}}>0 / 50,000,000</div>
+                    <div style={{paddingLeft:'25px'}}>0 / 50,000,000</div>
                   </Col>  
                 </CardBody>
                 <CardBody> 
-                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'25px'}}>
                     <i className={"now-ui-icons ui-2_time-alarm"}/>
-                  </div>
-                  <div>Token Sell Remaining</div>
+                  </div> 
                   <Col>
-                    <div>Total Sold</div>
-                    <div style={{paddingLeft:'10px'}}>0 / 50,000,000</div>
+                    <div>Token Sell Remaining</div> 
+                    <div style={{paddingLeft:'10px'}}>
+                      <CounterdownSection 
+                        days="39"
+                        hours="21"
+                        mins="32"
+                        seconds="44" 
+                      >
+                      </CounterdownSection>
+                    </div> 
                   </Col>    
                 </CardBody>
-              </Card>
-            </Col>
-            <Col xs={12} md={8}> 
-                  
-            </Col> 
-            <Col xs={12} md={12}>
-              <Card className="card-stats card-raised">
-                <CardBody>
-                  <Row>
-                    <Col xs={12} md={3}>
-                      <Statistics
-                        iconState="primary"
-                        icon="ui-2_chat-round"
-                        title="859"
-                        subtitle="Messages"
-                      />
-                    </Col>
-                    <Col xs={12} md={3}>
-                      <Statistics
-                        iconState="success"
-                        icon="business_money-coins"
-                        title={
-                          <span>
-                            <small>$</small>3,521
-                          </span>
-                        }
-                        subtitle="Today Revenue"
-                      />
-                    </Col>
-                    <Col xs={12} md={3}>
-                      <Statistics
-                        iconState="info"
-                        icon="users_single-02"
-                        title="562"
-                        subtitle="Customers"
-                      />
-                    </Col>
-                    <Col xs={12} md={3}>
-                      <Statistics
-                        iconState="danger"
-                        icon="objects_support-17"
-                        title="353"
-                        subtitle="Support Requests"
-                      />
-                    </Col>
-                  </Row>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} md={4}>
-              <Card className="card-chart">
-                <CardHeader>
-                  <CardCategory>Active Users</CardCategory>
-                  <CardTitle tag="h2">34,252</CardTitle>
-                  <UncontrolledDropdown>
-                    <DropdownToggle
-                      className="btn-round btn-simple btn-icon"
-                      color="default"
-                    >
-                      <i className="now-ui-icons loader_gear" />
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another Action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                      <DropdownItem className="text-danger">
-                        Remove data
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </CardHeader>
-                <CardBody>
-                  <div className="chart-area">
-                    <Line
-                      data={dashboardActiveUsersChart.data}
-                      options={dashboardActiveUsersChart.options}
-                    />
-                  </div>
-                  <Table responsive>
-                    <tbody>{this.createTableData()}</tbody>
-                  </Table>
-                </CardBody>
-                <CardFooter>
-                  <Stats>
-                    {[
-                      {
-                        i: "now-ui-icons arrows-1_refresh-69",
-                        t: "Just Updated"
-                      }
-                    ]}
-                  </Stats>
-                </CardFooter>
-              </Card>
-            </Col>
-            <Col xs={12} md={4}>
-              <Card className="card-chart">
-                <CardHeader>
-                  <CardCategory>Summer Email Campaign</CardCategory>
-                  <CardTitle tag="h2">55,300</CardTitle>
-                  <UncontrolledDropdown>
-                    <DropdownToggle
-                      className="btn-round btn-simple btn-icon"
-                      color="default"
-                    >
-                      <i className="now-ui-icons loader_gear" />
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another Action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                      <DropdownItem className="text-danger">
-                        Remove data
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </CardHeader>
-                <CardBody>
-                  <div className="chart-area">
-                    <Line
-                      data={dashboardSummerChart.data}
-                      options={dashboardSummerChart.options}
-                    />
-                  </div>
-                  <div className="card-progress">
-                    <Progress badge="Delivery Rate" value="90" />
-                    <Progress color="success" badge="Open Rate" value="60" />
-                    <Progress color="info" badge="Click Rate" value="12" />
-                    <Progress color="primary" badge="Hard Bounce" value="5" />
-                    <Progress color="danger" badge="Spam Report" value="0.11" />
-                  </div>
-                </CardBody>
-                <CardFooter>
-                  <Stats>
-                    {[
-                      {
-                        i: "now-ui-icons arrows-1_refresh-69",
-                        t: "Just Updated"
-                      }
-                    ]}
-                  </Stats>
-                </CardFooter>
-              </Card>
-            </Col>
-            <Col xs={12} md={4}>
-              <Card className="card-chart">
-                <CardHeader>
-                  <CardCategory>Active Countries</CardCategory>
-                  <CardTitle tag="h2">105</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <div className="chart-area">
-                    <Line
-                      data={dashboardActiveCountriesCard.data}
-                      options={dashboardActiveCountriesCard.options}
-                    />
-                  </div>
-                  <VectorMap
-                    map={"world_mill"}
-                    backgroundColor="transparent"
-                    zoomOnScroll={false}
-                    containerStyle={{
-                      width: "100%",
-                      height: "280px"
-                    }}
-                    containerClassName="map"
-                    regionStyle={{
-                      initial: {
-                        fill: "#e4e4e4",
-                        "fill-opacity": 0.9,
-                        stroke: "none",
-                        "stroke-width": 0,
-                        "stroke-opacity": 0
-                      }
-                    }}
-                    series={{
-                      regions: [
-                        {
-                          values: mapData,
-                          scale: ["#AAAAAA", "#444444"],
-                          normalizeFunction: "polynomial"
-                        }
-                      ]
-                    }}
-                  />
-                </CardBody>
-                <CardFooter>
-                  <Stats>
-                    {[{ i: "now-ui-icons ui-2_time-alarm", t: "Last 7 days" }]}
-                  </Stats>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} md={12}>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Best Selling Products</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Table responsive className="table-shopping">
-                    <thead>
-                      <tr>
-                        <th className="text-center" />
-                        <th>PRODUCT</th>
-                        <th>COLOR</th>
-                        <th>Size</th>
-                        <th className="text-right">PRICE</th>
-                        <th className="text-right">QTY</th>
-                        <th className="text-right">AMOUNT</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div className="img-container">
-                            <img src={jacket} alt="..." />
-                          </div>
-                        </td>
-                        <td className="td-name">
-                          <a href="#jacket">Suede Biker Jacket</a>
-                          <br />
-                          <small>by Saint Laurent</small>
-                        </td>
-                        <td>Black</td>
-                        <td>M</td>
-                        <td className="td-number">
-                          <small>€</small>3,390
-                        </td>
-                        <td className="td-number">1</td>
-                        <td className="td-number">
-                          <small>€</small>549
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div className="img-container">
-                            <img src={shirt} alt="..." />
-                          </div>
-                        </td>
-                        <td className="td-name">
-                          <a href="#shirt">Jersey T-Shirt</a>
-                          <br />
-                          <small>by Balmain</small>
-                        </td>
-                        <td>Black</td>
-                        <td>M</td>
-                        <td className="td-number">
-                          <small>€</small>499
-                        </td>
-                        <td className="td-number">2</td>
-                        <td className="td-number">
-                          <small>€</small>998
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div className="img-container">
-                            <img src={swim} alt="..." />
-                          </div>
-                        </td>
-                        <td className="td-name">
-                          <a href="#pants">Slim-Fit Swim Short </a>
-                          <br />
-                          <small>by Prada</small>
-                        </td>
-                        <td>Red</td>
-                        <td>M</td>
-                        <td className="td-number">
-                          <small>€</small>200
-                        </td>
-                        <td className="td-number">3</td>
-                        <td className="td-number">
-                          <small>€</small>799
-                        </td>
-                      </tr>
-                      <tr>
-                        <td colSpan="5" />
-                        <td className="td-total">Total</td>
-                        <td className="td-price">
-                          <small>€</small>2,346
-                        </td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </CardBody>
-              </Card>
-            </Col>
+              </Card> 
+              
+              <Card className="card-chart"> 
+                <CardBody> 
+                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'25px'}}>
+                    <i className={"now-ui-icons objects_key-25"}/>
+                  </div> 
+                  <Col>
+                    <div>Referral Code</div>
+                    <div style={{padding:'25px'}}>
+                      <CardTitle tag="h5">5b857a69bb539f3241927a66</CardTitle>  
+                    </div>
+                    <div style={{paddingLeft:'25px'}}>
+                    This is your SRT referral link.You can use it to
+                    share with your friends or other interested  parties. If any of them sign up with this link, 
+                    you will get reward amounts.
+                    </div>
+                  </Col>  
+                </CardBody> 
+                <CardBody> 
+                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'25px'}}>
+                    <i className={"now-ui-icons objects_key-25"}/>
+                  </div> 
+                  <Col>
+                    <div style={{paddingBottom:'25px'}}>Share Code</div> 
+                    <div style={{paddingLeft:'25px'}}>
+                      <Row> 
+                        <Col md={2} sm={1} xs={12}>
+                          <Button icon facebook>
+                            <i className="fa fa-facebook"> </i>
+                          </Button>
+                        </Col>
+                        <Col md={2} sm={1} xs={12}>
+                          <Button icon linkedin>
+                            <i className="fa fa-linkedin"> </i>
+                          </Button>
+                        </Col>
+                        <Col md={2} sm={1} xs={12}>
+                          <Button icon twitter>
+                            <i className="fa fa-twitter"> </i>
+                          </Button>
+                        </Col>
+                        <Col md={2} sm={1} xs={12}>
+                          <Button icon dribbble>
+                            <i className="fa fa-dribbble"> </i>
+                          </Button>
+                        </Col>
+                        <Col md={2} sm={1} xs={12}>
+                          <Button icon reddit>
+                            <i className="fa fa-reddit"> </i>
+                          </Button>
+                        </Col>
+                        <Col md={2} sm={1} xs={12}>
+                          <Button icon behance>
+                            <i className="fa fa-behance"> </i>
+                          </Button>
+                        </Col>
+                      </Row>
+                    </div>
+                  </Col>  
+                </CardBody> 
+              </Card> 
+            </Col>   
           </Row>
         </div>
       </div>
