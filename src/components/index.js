@@ -8,7 +8,7 @@ import CardSocial from './CardElements/CardSocial';
 import CardSocials from './CardElements/CardSocials';
 import CardStats from './CardElements/CardStats';
 import CardSection from './CardSection/CardSection';
-
+import CounterdownSection from './CounterdownSection/CounterdownSection';
 import Button from './CustomButton/CustomButton';
 
 import IconCheckbox from './CustomCheckbox/IconCheckbox';
@@ -68,7 +68,7 @@ export {
     // CustomRadio
     Radio,
     // CustomUpload
-    ImageUpload,
+    ImageUpload,CounterdownSection,
     PictureUpload,
     // Footer
     Footer,
