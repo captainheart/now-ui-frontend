@@ -2,7 +2,7 @@ import React from "react";
   
 import userBackground from "assets/img/bg5.jpg";
 import userAvatar from "assets/img/mike.jpg";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   Card,
   CardHeader,
@@ -95,27 +95,28 @@ class Dashboard extends React.Component {
         />
         <div className="content">
           <Row>
-          <Col md={8} xs={12}>
-              <Card className="card-user">
-                <div className="image">
-                  <img src={userBackground} alt="..." />
-                </div>
-                <CardBody>
-                  <CardAuthor
-                    avatar={userAvatar}
-                    avatarAlt="..."
-                    title="SRT"
-                    description="SocialRemit Token"
-                  />
-                  <p className="description text-center">
-                    "We would like to thank you for your interest to our project. You're in your professional account <br />
-                    of the SocialRemit token(SRT) sale dashboard"
-                  </p>
-                </CardBody>
-                <hr /> 
-              </Card>
-            </Col>
-            <Col xs={12} md={8}> 
+            <Col md={8} xs={12}>
+                <Card className="card-user">
+                  <div className="image">
+                    <img src={userBackground} alt="..." />
+                  </div>
+                  <CardBody>
+                    <CardAuthor
+                      avatar={userAvatar}
+                      avatarAlt="..."
+                      title="SRT"
+                      description="SocialRemit Token"
+                    />
+                    <p className="description text-center">
+                      "We would like to thank you for your interest to our project. You're in your professional account <br />
+                      of the SocialRemit token(SRT) sale dashboard"
+                    </p>
+                    <div>
+    Favorite Food: <FontAwesomeIcon icon="dove" />
+  </div>
+                  </CardBody>
+                  <hr /> 
+                </Card>
                 <Card className="card-tasks"> 
                   <CardHeader> 
                     <Row> 
@@ -151,11 +152,97 @@ class Dashboard extends React.Component {
                     </Row>
                   </CardHeader>
                   <CardBody>
-                    {/*SRT Token Price*/}
-                    <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
-                      <i className={"now-ui-icons shopping_credit-card"}/>
-                    </div>
-                    <div>My SRT Referral Tokens</div>
+                    {/*SRT Token Price*/} 
+                    <Card className="card-plain"> 
+                      <CardHeader>
+                        <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                          <i className={"now-ui-icons business_chart-bar-32"}/>
+                        </div>
+                        <div>My SRT Referral Tokens</div>
+                      </CardHeader> 
+                      <CardBody>
+                          {/**/}
+                          {/* <PriceShowCard>
+
+                          </PriceShowCard> */}
+                      </CardBody>
+                      <CardFooter>
+                        <Row>
+                          <Col xs={12} sm={6} md={6} lg={6}>
+                              <Card className="card-stats">
+                                <CardBody>
+                                  <Statistics
+                                    horizontal
+                                    icon="business_globe"
+                                    iconState="warning"
+                                    subtitle="1 SRT = 0.000012341 BTC" 
+                                  />
+                                </CardBody> 
+                              </Card>
+                            </Col>
+                            <Col xs={12} sm={6} md={6} lg={6}>
+                              <Card className="card-stats">
+                                <CardBody>
+                                  <Statistics
+                                    horizontal
+                                    icon="objects_diamond"
+                                    iconState="warning"
+                                    subtitle="1 SRT = 0.00034526 ETH" 
+                                  />
+                                </CardBody> 
+                              </Card>
+                            </Col>
+                            <Col xs={12} sm={6} md={6} lg={6}>
+                              <Card className="card-stats">
+                                <CardBody>
+                                  <Statistics
+                                    horizontal
+                                    icon="business_money-coins"
+                                    iconState="warning"
+                                    subtitle="1 SRT = 0.1200000 XRP" 
+                                  />
+                                </CardBody> 
+                              </Card>
+                            </Col>
+                            <Col xs={12} sm={6} md={6} lg={6}>
+                              <Card className="card-stats">
+                                <CardBody>
+                                  <Statistics
+                                    horizontal
+                                    icon="objects_support-17"
+                                    iconState="warning"
+                                    subtitle="1 SRT = 0.00019535 BCH" 
+                                  />
+                                </CardBody> 
+                              </Card>
+                            </Col>
+                            <Col xs={12} sm={6} md={6} lg={6}>
+                              <Card className="card-stats">
+                                <CardBody>
+                                  <Statistics
+                                    horizontal
+                                    icon="business_bank"
+                                    iconState="warning"
+                                    subtitle="1 SRT = 0.00182999 LTC"  
+                                  />
+                                </CardBody> 
+                              </Card>
+                            </Col>
+                            <Col xs={12} sm={6} md={6} lg={6}>
+                              <Card className="card-stats">
+                                <CardBody>
+                                  <Statistics
+                                    horizontal
+                                    icon="arrows-1_share-66"
+                                    iconState="warning"
+                                    subtitle="1 SRT = $ 0.15" 
+                                  />
+                                </CardBody> 
+                              </Card>
+                            </Col>
+                        </Row>
+                      </CardFooter> 
+                    </Card>
                   </CardBody>
                   <CardFooter>
                     <hr />
@@ -168,7 +255,65 @@ class Dashboard extends React.Component {
                       ]}
                     </Stats>
                   </CardFooter>
-                </Card>  
+                </Card>
+            </Col>
+            <Col xs={12} md={4}>
+              <Card className="card-chart">
+                <CardHeader> 
+                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                    <i className={"now-ui-icons design_vector"}/>
+                  </div>
+                  <div>Token Distribution</div> 
+                  <Row>
+                    <Col xs={12} md={6} lg={6}>
+                      <Card className="card-pricing card-plain">
+                        <h6 className="card-category">  Pre ICO</h6>
+                        <CardBody>
+                          <CardIcon
+                            color="success"
+                            icon="now-ui-icons media-2_sound-wave"
+                          />
+                          <CardTitle tag="h3">50M</CardTitle> 
+                        </CardBody> 
+                      </Card>
+                    </Col>
+                    <Col xs={12} md={6} lg={6}>
+                      <Card className="card-pricing card-plain">
+                        <h6 className="card-category"> ICO</h6>
+                        <CardBody>
+                          <CardIcon
+                            color="danger"
+                            icon="now-ui-icons education_atom"
+                          />
+                          <CardTitle tag="h3">75M</CardTitle> 
+                        </CardBody> 
+                      </Card>
+                    </Col>
+                  </Row>
+                </CardHeader>
+                <CardBody> 
+                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                    <i className={"now-ui-icons education_paper"}/>
+                  </div> 
+                  <Col>
+                    <div>Total Sold</div>
+                    <div style={{paddingLeft:'10px'}}>0 / 50,000,000</div>
+                  </Col>  
+                </CardBody>
+                <CardBody> 
+                  <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'10px'}}>
+                    <i className={"now-ui-icons ui-2_time-alarm"}/>
+                  </div>
+                  <div>Token Sell Remaining</div>
+                  <Col>
+                    <div>Total Sold</div>
+                    <div style={{paddingLeft:'10px'}}>0 / 50,000,000</div>
+                  </Col>    
+                </CardBody>
+              </Card>
+            </Col>
+            <Col xs={12} md={8}> 
+                  
             </Col> 
             <Col xs={12} md={12}>
               <Card className="card-stats card-raised">
