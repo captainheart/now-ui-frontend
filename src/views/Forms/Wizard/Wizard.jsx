@@ -10,9 +10,9 @@ import Step2 from "./Step2.jsx";
 import Step3 from "./Step3.jsx";
 
 var steps = [
-  { stepName: "About", component: Step1 },
-  { stepName: "Account", component: Step2 },
-  { stepName: "Address", component: Step3 }
+  { stepName: "Choose Payment", component: Step1 },
+  { stepName: "Current Deposit", component: Step2 },
+  { stepName: "Deposite Status", component: Step3 }
 ];
 
 class Wizard extends Component {
@@ -26,8 +26,8 @@ class Wizard extends Component {
               steps={steps}
               navSteps
               validate
-              title="Build Your Profile"
-              subtitle="This information will let us know more about you."
+              title="Purchase Tokens"
+              subtitle="Follow these three steps."
               headerTextCenter
               color="blue"
             />

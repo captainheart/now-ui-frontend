@@ -7,68 +7,66 @@ class Step1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstname: "",
-      lastname: "",
+      srtvalue: "",
+      amountvalue: "",
       email: "",
-      firstnameState: "",
-      lastnameState: "",
+      srtvalueState: "",
+      amountvalueState: "",
       emailState: ""
     };
-    this.firstNameChange = this.firstNameChange.bind(this);
+    this.srtValueChange = this.srtValueChange.bind(this);
   }
-  firstNameChange(e) {
+  srtValueChange(e) {
     this.setState({
-      firstname: e.target.value
+      srtvalue: e.target.value
     });
-    if (e.target.value.length > 2) {
+    if (e.target.value > 50 ) {
       this.setState({
-        firstnameState: " has-success"
+        srtvalueState: " has-success"
       });
     } else {
       this.setState({
-        firstnameState: " has-danger"
+        srtvalueState: " has-danger"
       });
     }
   }
-  lastNameChange(e) {
+  amountValueChange(e) {
     this.setState({
-      lastname: e.target.value
+      amountvalue: e.target.value
     });
-    if (e.target.value.length > 2) {
+    if (e.target.value > 0) {
       this.setState({
-        lastnameState: " has-success"
+        amountvalueState: " has-success"
       });
     } else {
       this.setState({
-        lastnameState: " has-danger"
+        amountvalueState: " has-danger"
       });
     }
   }
-  emailChange(e) {
-    this.setState({
-      email: e.target.value
-    });
-    var emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (emailRex.test(e.target.value)) {
-      this.setState({
-        emailState: " has-success"
-      });
-    } else {
-      this.setState({
-        emailState: " has-danger"
-      });
-    }
-  }
+  // emailChange(e) {
+  //   this.setState({
+  //     email: e.target.value
+  //   });
+  //   var emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  //   if (emailRex.test(e.target.value)) {
+  //     this.setState({
+  //       emailState: " has-success"
+  //     });
+  //   } else {
+  //     this.setState({
+  //       emailState: " has-danger"
+  //     });
+  //   }
+  // }
   isValidated() {
     if (
-      this.state.firstnameState !== " has-success" ||
-      this.state.lastnameState !== " has-success" ||
-      this.state.emailState !== " has-success"
+      this.state.srtvalueState !== " has-success" ||
+      this.state.amountvalueState !== " has-success"  
     ) {
       this.setState({
-        firstnameState: " has-danger",
-        lastnameState: " has-danger",
-        emailState: " has-danger"
+        srtvalueState: " has-danger",
+        amountvalueState: " has-danger" 
       });
       return false;
     }
@@ -79,51 +77,48 @@ class Step1 extends React.Component {
       <div>
         <h5 className="info-text">
           {" "}
-          Let's start with the basic information (with validation)
+          You can enter a number of SRT Tokens you want to buy and calculate the amount you would need to have in your account wallet.
         </h5>
-        <Row className="justify-content-center">
-          <Col xs={12} sm="4">
-            <PictureUpload />
-          </Col>
+        <Row className="justify-content-center"> 
           <Col xs={12} sm="6">
             <InputGroup
               size="lg"
               className={
-                (this.state.firstnameState ? this.state.firstnameState : "") +
-                (this.state.firstnameFocus ? " input-group-focus" : "")
+                (this.state.srtvalueState ? this.state.srtvalueState : "") +
+                (this.state.srtvalueFocus ? " input-group-focus" : "")
               }
             >
               <InputGroupAddon>
                 <i className="now-ui-icons users_circle-08" />
               </InputGroupAddon>
               <Input
-                defaultValue={this.state.firstname}
+                defaultValue={this.state.srtvalue}
                 type="text"
                 placeholder="First Name (required)"
-                name="firstname"
-                onFocus={e => this.setState({ firstnameFocus: true })}
-                onBlur={e => this.setState({ firstnameFocus: false })}
-                onChange={e => this.firstNameChange(e)}
+                name="srtvalue"
+                onFocus={e => this.setState({ srtvalueFocus: true })}
+                onBlur={e => this.setState({ srtvalueFocus: false })}
+                onChange={e => this.srtValueChange(e)}
               />
             </InputGroup>
             <InputGroup
               size="lg"
               className={
-                (this.state.lastnameState ? this.state.lastnameState : "") +
-                (this.state.lastnameFocus ? " input-group-focus" : "")
+                (this.state.amountvalueState ? this.state.amountvalueState : "") +
+                (this.state.amountvalueFocus ? " input-group-focus" : "")
               }
             >
               <InputGroupAddon>
                 <i className="now-ui-icons text_caps-small" />
               </InputGroupAddon>
               <Input
-                defaultValue={this.state.lastname}
+                defaultValue={this.state.amountvalue}
                 type="text"
                 placeholder="Last Name (required)"
-                name="lastname"
-                onFocus={e => this.setState({ lastnameFocus: true })}
-                onBlur={e => this.setState({ lastnameFocus: false })}
-                onChange={e => this.lastNameChange(e)}
+                name="amountvalue"
+                onFocus={e => this.setState({ amountvalueFocus: true })}
+                onBlur={e => this.setState({ amountvalueFocus: false })}
+                onChange={e => this.amountValueChange(e)}
               />
             </InputGroup>
           </Col>
