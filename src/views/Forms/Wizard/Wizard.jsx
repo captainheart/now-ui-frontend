@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Col } from "reactstrap";
+import { Row, Col, InputGroup, InputGroupAddon, Input } from "reactstrap";
 // react plugin used to create a form with multiple steps
 import ReactWizard from "react-bootstrap-wizard";
-
+ 
 import { PanelHeader } from "components";
 
 import Step1 from "./Step1.jsx";

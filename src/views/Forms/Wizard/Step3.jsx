@@ -1,57 +1,59 @@
 import React from "react";
-import { Row, Col, FormGroup, Label, Input } from "reactstrap";
-// react plugin used to create DropdownMenu for selecting items
-import Select from "react-select";
+import { Row,
+  Card,
+  CardBody,
+  CardFooter,
+  CardTitle,
+  CardHeader,
+  Col } from "reactstrap";
 
-var selectOptions = [
-  { value: "one", label: "One" },
-  { value: "two", label: "Two" },
-  { value: "three", label: "Three" },
-  { value: "four", label: "Four" },
-  { value: "five", label: "Five" },
-  { value: "six", label: "Six" }
-];
+import { IconCheckbox,Button,CardIcon,Progress } from "components"; 
+import qrSample from "assets/img/qrSample.jpg";
 
-class Step3 extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      select: null
-    };
-  }
+class Step3 extends React.Component { 
   render() {
     return (
-      <div>
-        <h5 className="info-text"> Are you living in a nice area? </h5>
+      <div> 
         <Row className="justify-content-center">
-          <Col xs={12} sm={7}>
-            <FormGroup>
-              <Label>Street Name</Label>
-              <Input type="text" />
-            </FormGroup>
+          <Col xs={12} sm={8}> 
+            <Card className="card-pricing">
+              <div className={"icon icon-info"} style={{float:'left',textAlign:'center',padding:'25px',paddingLeft:'50px' }}>
+                <i className={"now-ui-icons business_bank"}/>
+              </div>
+              <div style={{padding:'25px'}}>Deposit Satus</div> 
+              <CardBody>  
+                <CardTitle>Progress Bars</CardTitle>
+                <Progress badge="2 of 4 confirmations received." value="50" ></Progress>  
+                <ul>
+                  <li>Four confirmations are required to send you SRT Tokens.</li> 
+                </ul>
+              </CardBody> 
+                <CardFooter>
+                  <Button href="#pablo" color="info" round >
+                    Update
+                  </Button>
+                </CardFooter>
+            </Card>
           </Col>
-          <Col xs={12} sm={3}>
-            <FormGroup>
-              <Label>Street No.</Label>
-              <Input type="text" />
-            </FormGroup>
-          </Col>
-          <Col xs={12} sm={5}>
-            <FormGroup>
-              <Label>City</Label>
-              <Input type="text" />
-            </FormGroup>
-          </Col>
-          <Col xs={12} sm={5}>
-            <Label>Country</Label>
-            <Select
-              className="primary"
-              placeholder="Single Select"
-              name="singleSelect"
-              value={this.state.select}
-              options={selectOptions}
-              onChange={value => this.setState({ select: value })}
-            />
+          <Col xs={12} sm={4}> 
+            <Card className="card-pricing">
+                <h6 className="card-category">My SocialRemit Tokens</h6>
+                <CardBody>
+                  <CardIcon
+                    color="primary"
+                    icon="now-ui-icons objects_diamond"
+                  />
+                  <CardTitle tag="h3">0 SRT</CardTitle>
+                  <ul>
+                    <li>Did you set wallet for withdraw?</li> 
+                  </ul>
+                </CardBody>
+                <CardFooter>
+                  <Button href="#pablo" color="primary" round>
+                    Set wallet
+                  </Button>
+                </CardFooter>
+              </Card>
           </Col>
         </Row>
       </div>
