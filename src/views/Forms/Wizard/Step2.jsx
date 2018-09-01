@@ -60,7 +60,7 @@ class Step2 extends React.Component {
                   </ul>
                 </CardBody>
                 <CardFooter>
-                  <Button href="#pablo" color="primary" round>
+                  <Button href="#pablo" color="primary">
                     Set wallet
                   </Button>
                 </CardFooter>

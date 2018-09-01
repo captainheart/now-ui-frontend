@@ -10,18 +10,14 @@ import {
   CardFooter,
   CardTitle,
   Row,
-  Col,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Table
-} from "reactstrap";
+  Col 
+} from "reactstrap"; 
+
+import { 
+  chartsLine2 
+} from "variables/charts";
 // react plugin used to create charts
 import { Line } from "react-chartjs-2";
-// react plugin for creating vector maps
-import { VectorMap } from "react-jvectormap";
- 
 import {
   FormInputs,
   PanelHeader,
@@ -44,11 +40,7 @@ import {
   dashboardActiveCountriesCard
 } from "variables/charts.jsx";
 
-// import jacket from "assets/img/saint-laurent.jpg";
-import jacket from "assets/img/saint-laurent.jpg";
-import shirt from "assets/img/balmain.jpg";
-import swim from "assets/img/prada.jpg";
-import coins from "assets/img/coins.jpg";
+// import jacket from "assets/img/saint-laurent.jpg"; 
 
 import { table_data } from "variables/general.jsx";
 
@@ -112,9 +104,9 @@ class Dashboard extends React.Component {
                       "We would like to thank you for your interest to our project. You're in your professional account <br />
                       of the SocialRemit token(SRT) sale dashboard"
                     </p>
-                    <div>
-    Favorite ii: <FontAwesomeIcon icon="dove" />
-  </div>
+                    {/* <div>
+                      Favorite ii: <FontAwesomeIcon icon="dove" />
+                    </div> */}
                   </CardBody>
                   <hr /> 
                 </Card>
@@ -161,7 +153,13 @@ class Dashboard extends React.Component {
                         </div>
                         <div>My SRT Referral Tokens</div>
                       </CardHeader> 
-                      <CardBody>
+                      <CardBody>  
+                        <div className="chart-area">
+                          <Line
+                            data={chartsLine2.data}
+                            options={chartsLine2.options}
+                          />
+                        </div> 
                           {/**/}
                           {/* <PriceShowCard>
 
@@ -318,8 +316,7 @@ class Dashboard extends React.Component {
                     </div> 
                   </Col>    
                 </CardBody>
-              </Card> 
-              
+              </Card>  
               <Card className="card-chart"> 
                 <CardBody> 
                   <div className={"icon icon-info"} style={{float:'left',textAlign:'center',paddingRight:'25px'}}>

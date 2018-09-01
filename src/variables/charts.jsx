@@ -420,10 +420,10 @@ const chartsLine2 = {
     gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
     gradientFill.addColorStop(1, hexToRGB("#18ce0f", 0.4));
     return {
-      labels: ["12pm,", "3pm", "6pm", "9pm", "12am", "3am", "6am", "9am"],
+      labels: ["1 month,", "2 months", "3 months", "4 months", "5 months", "6 months", "7 months"],
       datasets: [
         {
-          label: "Email Stats",
+          label: "SRT Token Price",
           borderColor: "#18ce0f",
           pointBorderColor: "#FFF",
           pointBackgroundColor: "#18ce0f",
@@ -434,7 +434,7 @@ const chartsLine2 = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
-          data: [40, 500, 650, 700, 1200, 1250, 1300, 1900]
+          data: [0.2,0.22, 0.24, 0.26, 0.28, 0.3, 0.32]
         }
       ]
     };

@@ -36,33 +36,24 @@ const tasks = [
 // // // table head data and table body data for Tables view
 // #############################
 
-const thead = ["Name", "Country", "City", "Salary"];
+const thead = ["User Name", "Address", "Amount", "Date"];
 const tbody = [
   {
     className: "table-success",
-    data: ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"]
+    data: ["Dakota Rice", "Niger", "2,354", "2017/11/07"]
   },
   {
     className: "",
-    data: ["Minerva Hooper", "Curaçao", "Sinaai-Waas", "$23,789"]
+    data: ["Minerva Hooper", "Curaçao", "52", "2018/07/19"]
   },
   {
     className: "table-info",
-    data: ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"]
+    data: ["Sage Rodriguez", "Netherlands", "112", "2018/02/05"]
   },
   {
     className: "",
-    data: ["Philip Chaney", "Korea, South", "Overland Park", "$38,735"]
-  },
-  {
-    className: "table-danger",
-    data: ["Doris Greene", "Malawi", "Feldkirchen in Kärnten", "$63,542"]
-  },
-  { className: "", data: ["Mason Porter", "Chile", "Gloucester", "$78,615"] },
-  {
-    className: "table-warning",
-    data: ["Jon Porter", "Portugal", "Gloucester", "$98,615"]
-  }
+    data: ["Philip Chaney", "Korea, South", "22,546", "2018/01/25"]
+  } 
 ];
 
 // ##############################

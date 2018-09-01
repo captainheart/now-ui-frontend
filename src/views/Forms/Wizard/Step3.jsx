@@ -19,17 +19,17 @@ class Step3 extends React.Component {
             <Card className="card-pricing">
               <div className={"icon icon-info"} style={{float:'left',textAlign:'center',padding:'25px',paddingLeft:'50px' }}>
                 <i className={"now-ui-icons business_bank"}/>
+                <div style={{paddingLeft:'50px',float:'right'}}>Deposit Satus</div> 
               </div>
-              <div style={{padding:'25px'}}>Deposit Satus</div> 
               <CardBody>  
-                <CardTitle>Progress Bars</CardTitle>
+                <CardTitle>Confirmation Status</CardTitle>
                 <Progress badge="2 of 4 confirmations received." value="50" ></Progress>  
                 <ul>
                   <li>Four confirmations are required to send you SRT Tokens.</li> 
                 </ul>
               </CardBody> 
                 <CardFooter>
-                  <Button href="#pablo" color="info" round >
+                  <Button href="#pablo" color="info">
                     Update
                   </Button>
                 </CardFooter>
@@ -49,7 +49,7 @@ class Step3 extends React.Component {
                   </ul>
                 </CardBody>
                 <CardFooter>
-                  <Button href="#pablo" color="primary" round>
+                  <Button href="#pablo" color="primary">
                     Set wallet
                   </Button>
                 </CardFooter>
